@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "position": 1,
+        "startAt": "02-01-2022",
+        "endAt": "03-30-2022",
+        "companyName": "InsurBT",
+        "logo": "assets/template/experience/logo/insurBt.png",
+        "city": "Casablanca",
+        "country": "Morocco",
+        "role": "Mobile Developer Intern",
+        "description": "InsurBT is a company specializing in consulting and technologies for the insurance industry: Insurance company & Mutual Social welfare fund Health insurance fund.",
+        "technologies": [
+            "JAVA", "Spring Boot", "Spring Security","Spring MVC", "HTML", "CSS", "CSS3", "Javascript", "React Native", "SQL", "RestAPI", "MySQL", "Git", "Github", "SCRUM"
+        ],
+        "medias": [
+            {
+                "icon": "linkedin",
+                "title": "insurBT",
+                "http": "https://www.linkedin.com/company/insurbt/about/"
+            }
+        ],
+        "backgroundUrl": "assets/template/experience/uberaba.jpg"
+    },
+    {
+        "id": 2,
+        "position": 2,
+        "startAt": "04-01-2022",
+        "endAt": "10-01-2022",
+        "companyName": "Oracle",
+        "website": "https://www.oracle.com/",
+        "logo": "assets/template/experience/logo/oracle.png",
+        "city": "Casablanca",
+        "country": "Morocco",
+        "role": "Research assistance Developer",
+        "description": "Oracle Corp (Oracle) is a provider of cloud-based solutions for enterprises. The company offers database and middleware software, application software, cloud infrastructure software and hardware systems. It also offers integrated cloud solutions, including Infrastructure-as-a-Service (IaaS) and Software-as-a-Service (SaaS). Oracle provides licenses for on-premises new software.",
+        "technologies": [
+            "JAVA", "Dropwizard", "Hibernate", "HTML", "CSS", "CSS3", "Javascript", "Oracle Jet", "RestApi", "", "Git", "Jira", "Bitbucet", "Kanban"
+        ],
+        "medias": [
+            {
+                "icon": "linkedin",
+                "title": "Oracle",
+                "http": "https://www.linkedin.com/company/oracle/mycompany/verification/"
+            },
+            {
+                "icon": "instagram",
+                "title": "Oracle",
+                "http": "https://www.instagram.com/oracle/"
+            }
+        ],
+        "backgroundUrl": "assets/template/experience/rio.jpg"
+    }
+]

@@ -1,0 +1,9 @@
+[
+        {
+            "thumbnail": "assets/news/ensao.png",
+            "date": "06-21-2021",
+            "http": "http://ensao.ump.ma/",                    
+            "title": "School platform Application.",
+            "description": "Developing a mobile and web application to manage students, teachers, absence, sessions and classrooms in national school of sciences applied Oujda, using Spring Boot, Spring Security , SQL, MySQL, React JS, React Native, HTML, CSS, Javascript, UML, and Scrum as agile methodology."
+        }
+]

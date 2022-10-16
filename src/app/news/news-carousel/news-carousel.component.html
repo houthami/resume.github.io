@@ -1,0 +1,35 @@
+<div class="events-content" itemscope itemtype="https://schema.org/Article">
+    <meta itemprop="publisher" content="Hassan Outhami" />
+    <meta itemprop="author" content="Hassan Outhami" />
+    <ol [ngClass]="{'partial': _news.length < 3 && currentPage >= (_originalNews.length / resultsPerPage)}">
+        <li *ngFor="let new of _news" itemprop="techArticle" itemscope itemtype="https://schema.org/TechArticle">
+            <div class="card" [@fadeInOut] itemprop="item">
+                <a href="{{ new.http }}" rel="nofollow" target="_blank" itemprop="url">
+                    <div class="thumbnail" [style.backgroundImage]="'url('+new.thumbnail+')'">
+                        <meta itemprop="thumbnailUrl" content="{{ new.thumbnail }}" />
+                        <meta itemprop="image" content="{{ new.thumbnail }}" />
+                        <span class="date" itemprop="datePublished">{{ new.date | safariDateFormatter | localizedDate:'MMM yyyy' }}</span>
+                    </div>
+                    <div class="content">
+                        <meta itemprop="author" content="Hassan Outhami" />
+                        <meta itemprop="creator" content="Hassan Outhami" />
+                        <meta itemprop="publisher" content="Hassan Outhami" />
+                        <h2 class="title" appInternationalization itemprop="name" itemprop="headline">{{new.title}}</h2>
+                        <p class="description" appInternationalization ellipsis='275' itemprop="description">{{new.description}}</p>
+                    </div>
+                    <!--<button class="read-more" i18n="news@@readMore">Read more</button>-->
+                </a>
+            </div>
+        </li>
+    </ol>
+    <p class="paginator">
+        <span class="range">
+            <span class="start">{{ start + 1 }}</span>
+            <span class="devider">-</span>
+            <span class="end">{{ end > _originalNews?.length ? _originalNews?.length : end }}</span>
+        </span>
+        <span i18n="news@@of">of</span>
+        <span>{{ _originalNews?.length }}</span>
+        <span class="label" i18n="nav@@news">news</span>
+    </p>
+</div>
