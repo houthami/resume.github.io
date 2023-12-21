@@ -49,30 +49,6 @@
                 "http": "https://www.instagram.com/oracle/"
             }
         ],
-        "backgroundUrl": "assets/template/experience/oracle.jpg"
-        
-    },
-    {
-        "id": 3,
-        "position": 3,
-        "startAt": "11-01-2022",
-        "endAt": "01-01-2024",
-        "companyName": "Amosys", 
-        "logo": "assets/template/experience/logo/orsys.png",
-        "city": "Rabat",
-        "country": "Morocco",
-        "role": "Software engineer",
-        "description": "Amosys is the developement pool for Orsys, is a company specializing in consulting and technologies for more than 86 insurance industry in plus of 14 countries: Insurance company & Mutual Social welfare fund Health insurance fund.",
-        "technologies": [
-            "JAVA", "Vert.x", "Hibernate", "HTML", "CSS", "CSS3", "Javascript", "React", "Antd", "python", "FastApi", "RestApi", "Git", "Jira", "Github", "Scrum"
-        ],
-        "medias": [
-            {
-                "icon": "linkedin",
-                "title": "Oracle",
-                "http": "https://www.linkedin.com/company/orsys-communication/mycompany/"
-            }
-        ],
-        "backgroundUrl": "assets/template/experience/rabat.jpeg"
+        "backgroundUrl": "assets/template/experience/rio.jpg"
     }
 ]
