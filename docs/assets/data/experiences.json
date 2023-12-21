@@ -49,14 +49,14 @@
                 "http": "https://www.instagram.com/oracle/"
             }
         ],
-        "backgroundUrl": "assets/template/experience/rio.jpg"
+        "backgroundUrl": "assets/template/experience/oracle.jpg"
         
     },
     {
         "id": 3,
         "position": 3,
         "startAt": "11-01-2022",
-        "endAt": "10-01-2022",
+        "endAt": "present",
         "companyName": "Amosys", 
         "logo": "assets/template/experience/logo/orsys.png",
         "city": "Rabat",
