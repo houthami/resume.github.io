@@ -1,7 +1,7 @@
 <div class="events-content" itemscope itemtype="https://schema.org/Article">
     <meta itemprop="publisher" content="Hassan Outhami" />
     <meta itemprop="author" content="Hassan Outhami" />
-    <ol [ngClass]="{'partial': _news.length < 3 && currentPage >= (_originalNews.length / resultsPerPage)}">
+    <ol [ngClass]="{'partial': _news.length < 2 && currentPage >= (_originalNews.length / resultsPerPage)}">
         <li *ngFor="let new of _news" itemprop="techArticle" itemscope itemtype="https://schema.org/TechArticle">
             <div class="card" [@fadeInOut] itemprop="item">
                 <a href="{{ new.http }}" rel="nofollow" target="_blank" itemprop="url">

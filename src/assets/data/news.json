@@ -5,5 +5,26 @@
             "http": "http://ensao.ump.ma/",                    
             "title": "School platform Application.",
             "description": "Developing a mobile and web application to manage students, teachers, absence, sessions and classrooms in national school of sciences applied Oujda, using Spring Boot, Spring Security , SQL, MySQL, React JS, React Native, HTML, CSS, Javascript, UML, and Scrum as agile methodology."
+        },
+        {
+            "thumbnail": "assets/news/ged.jpg",
+            "date": "01-01-2023",
+            "http": "#",                    
+            "title": "Document Management System",
+            "description": "Formulate and execute the development and implementation of a bespoke document management system meticulously crafted to address the unique requirements of our insurance company. This initiative is strategically aligned to enhance operational efficiency, uphold regulatory compliance, and streamline the intricate processes associated with document handling."
+        },
+        {
+            "thumbnail": "assets/news/workflow.jpg",
+            "date": "03-01-2023",
+            "http": "#",                    
+            "title": "Workflow",
+            "description": "Design and deploy a task management application within our insurance organization, with the overarching objective of optimizing workflow efficiency and accelerating task completion."
+        },
+        {
+            "thumbnail": "assets/news/customerSpace.jpg",
+            "date": "06-01-2023",
+            "http": "#",                    
+            "title": "Customer Space",
+            "description": "The conceptualization and implementation of a mobile application titled 'Customer Space,' designed exclusively for the end customers of our esteemed insurance company, aimed at enhancing user experience and providing a comprehensive platform for customer interaction."
         }
 ]

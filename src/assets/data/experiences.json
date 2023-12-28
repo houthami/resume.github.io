@@ -9,7 +9,7 @@
         "city": "Casablanca",
         "country": "Morocco",
         "role": "Mobile Developer Intern",
-        "description": "<b>InsurBT</b> is a company specializing in consulting and technologies for the insurance industry: Insurance company & Mutual Social welfare fund Health insurance fund.",
+        "description": "InsurBT is a company specializing in consulting and technologies for the insurance industry: Insurance company & Mutual Social welfare fund Health insurance fund.",
         "technologies": [
             "JAVA", "Spring Boot", "Spring Security","Spring MVC", "HTML", "CSS", "CSS3", "Javascript", "React Native", "SQL", "RestAPI", "MySQL", "Git", "Github", "SCRUM"
         ],
@@ -20,7 +20,7 @@
                 "http": "https://www.linkedin.com/company/insurbt/about/"
             }
         ],
-        "backgroundUrl": "assets/template/experience/uberaba.jpg"
+        "backgroundUrl": "assets/template/experience/insurBT.jpg"
     },
     {
         "id": 2,
@@ -33,7 +33,7 @@
         "city": "Casablanca",
         "country": "Morocco",
         "role": "Research assistance Developer",
-        "description": "<b>Oracle</b> Corp (Oracle) is a provider of cloud-based solutions for enterprises. The company offers database and middleware software, application software, cloud infrastructure software and hardware systems. It also offers integrated cloud solutions, including Infrastructure-as-a-Service (IaaS) and Software-as-a-Service (SaaS). Oracle provides licenses for on-premises new software.",
+        "description": "Oracle Corp (Oracle) is a provider of cloud-based solutions for enterprises. The company offers database and middleware software, application software, cloud infrastructure software and hardware systems. It also offers integrated cloud solutions, including Infrastructure-as-a-Service (IaaS) and Software-as-a-Service (SaaS). Oracle provides licenses for on-premises new software.",
         "technologies": [
             "JAVA", "Dropwizard", "Hibernate", "HTML", "CSS", "CSS3", "Javascript", "Oracle Jet", "RestApi", "", "Git", "Jira", "Bitbucet", "Kanban"
         ],
@@ -49,6 +49,28 @@
                 "http": "https://www.instagram.com/oracle/"
             }
         ],
-        "backgroundUrl": "assets/template/experience/rio.jpg"
+        "backgroundUrl": "assets/template/experience/oracle.jpg"
+    },
+    {
+        "id": 3,
+        "position": 3,
+        "startAt": "11-01-2022", 
+        "companyName": "Amosys", 
+        "logo": "assets/template/experience/logo/amosys.png",
+        "city": "Rabat",
+        "country": "Morocco",
+        "role": "Software engineer",
+        "description": "AMOSYS is a leading Moroccan-based assurance system dedicated to development. Collaborating with over 84 assurance companies across more than 15 countries, AMOSYS plays a pivotal role in shaping the landscape of assurance services in the African continent.",
+        "technologies": [
+            "JAVA", "Vert.x", "JUnit" ,  "Integration Test" , "HTML", "CSS", "CSS3", "Typescript", "React.js", "RestApi", "Python", "FastAPI", "Git", "Jira", "Bitbucet", "Scrum"
+        ],
+        "medias": [
+            {
+                "icon": "linkedin",
+                "title": "insurBT",
+                "http": "https://www.linkedin.com/company/insurbt/about/"
+            }
+        ],
+        "backgroundUrl": "assets/template/experience/amosys.png"
     }
 ]

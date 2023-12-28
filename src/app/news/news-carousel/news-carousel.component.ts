@@ -66,8 +66,8 @@ export class NewsCarouselComponent {
     }
 
     private onResizeElement(): void {
-        this.elWidth = this.elRef.nativeElement.clientWidth;
-        this.resultsPerPage = Math.ceil(this.elWidth / 465);
+        this.elWidth = this.elRef.nativeElement.clientWidth; 
+        this.resultsPerPage = Math.min(Math.ceil(this.elWidth / 465), 3);
 
         this.populateCarousel();
     }

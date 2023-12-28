@@ -20,7 +20,7 @@
                 "http": "https://www.linkedin.com/company/insurbt/about/"
             }
         ],
-        "backgroundUrl": "assets/template/experience/uberaba.jpg"
+        "backgroundUrl": "assets/template/experience/insurBT.jpg"
     },
     {
         "id": 2,
@@ -49,6 +49,28 @@
                 "http": "https://www.instagram.com/oracle/"
             }
         ],
-        "backgroundUrl": "assets/template/experience/rio.jpg"
+        "backgroundUrl": "assets/template/experience/oracle.jpg"
+    },
+    {
+        "id": 3,
+        "position": 3,
+        "startAt": "11-01-2022", 
+        "companyName": "Amosys", 
+        "logo": "assets/template/experience/logo/amosys.png",
+        "city": "Rabat",
+        "country": "Morocco",
+        "role": "Software engineer",
+        "description": "AMOSYS is a leading Moroccan-based assurance system dedicated to development. Collaborating with over 84 assurance companies across more than 15 countries, AMOSYS plays a pivotal role in shaping the landscape of assurance services in the African continent.",
+        "technologies": [
+            "JAVA", "Vert.x", "JUnit" ,  "Integration Test" , "HTML", "CSS", "CSS3", "Typescript", "React.js", "RestApi", "Python", "FastAPI", "Git", "Jira", "Bitbucet", "Scrum"
+        ],
+        "medias": [
+            {
+                "icon": "linkedin",
+                "title": "insurBT",
+                "http": "https://www.linkedin.com/company/insurbt/about/"
+            }
+        ],
+        "backgroundUrl": "assets/template/experience/amosys.png"
     }
 ]
