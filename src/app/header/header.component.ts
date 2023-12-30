@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, Renderer2, Inject, LOCALE_ID, AfterViewInit } from "@angular/core";
-import { faBars, faShareAlt, faCloudDownloadAlt, IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { AfterViewInit, Component, ElementRef, Inject, Input, LOCALE_ID, OnInit, Renderer2, ViewChild } from "@angular/core";
+import { IconDefinition, faBars, faCloudDownloadAlt, faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import { NgNavigatorShareService } from "ng-navigator-share";
 
 @Component({
@@ -9,11 +9,14 @@ import { NgNavigatorShareService } from "ng-navigator-share";
 })
 
 export class HeaderComponent implements OnInit, AfterViewInit {
-    
+
   private _activeSection: any;
   private _pageXOffset: any;
   private ngNavigatorShareService: NgNavigatorShareService;
-  
+  private indexOfAdsense = 0
+  private adsenses = ['Open for freelances', 'Open for CDIs', 'Open for collaboration', 'Open for Works :)']
+  adsence = ""
+
   hasMenuToggled: boolean;
   faBars: IconDefinition;
   faShareAlt: IconDefinition;
@@ -31,11 +34,11 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   // use getter setter to define the properties
-  get activeSection(): any { 
+  get activeSection(): any {
     return this._activeSection;
   }
-  
-  get pageXOffset(): any { 
+
+  get pageXOffset(): any {
     return this._pageXOffset;
   }
 
@@ -51,32 +54,62 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     this.updateNavigation();
   }
 
-  ngAfterViewInit() {    
-      // Share button available only for browsers that do support it.
-      if (this.ngNavigatorShareService.canShare()) {
-        this.shareBtn.nativeElement.style.display = "block";
-      }
+  ngAfterViewInit() {
+    // Share button available only for browsers that do support it.
+    if (this.ngNavigatorShareService.canShare()) {
+      this.shareBtn.nativeElement.style.display = "block";
+    }
   }
 
   ngOnInit(): void {
     this.faBars = faBars;
     this.faShareAlt = faShareAlt;
     this.faCloudDownloadAlt = faCloudDownloadAlt;
+    this.displayAdsenses(1, 0)
+  }
+  private displayAdsenses(speed, charIndex) { 
+    
+    this.adsence = "";
+    const adsenseToDispaly = this.adsenses[this.indexOfAdsense]
+    this.updateAdsence(adsenseToDispaly, 1, 0)
+  }
+
+  private updateAdsence(adsenseToDispaly, speed, charIndex) {  
+    if (charIndex < adsenseToDispaly.length) { 
+      setTimeout(() => {
+        this.adsence = adsenseToDispaly.substring(0, charIndex);
+      }, 100 * speed);
+      charIndex++
+      setTimeout(() => {
+        this.updateAdsence(adsenseToDispaly, speed, charIndex)
+      }, 100 * speed);
+    }
+    else { 
+      if(this.indexOfAdsense === this.adsenses.length - 1){ 
+        this.indexOfAdsense =  0
+      }else{ 
+        this.indexOfAdsense = this.indexOfAdsense + 1;
+      } 
+      
+      setTimeout(() => {
+        this.displayAdsenses(1, 0)
+      }, 1000 * speed);
+    }
   }
 
   private updateNavigation() {
 
-    if(this._activeSection && this.renderer) {
-      
+    if (this._activeSection && this.renderer) {
+
       // Remove any selected anchor
       const activePreviousElem = this.nav.nativeElement.querySelector("a.active");
-      
-      if(activePreviousElem) {
+
+      if (activePreviousElem) {
         this.renderer.removeClass(activePreviousElem, "active");
       }
 
       const targetElem = this.nav.nativeElement.querySelector(`a[href^="#${this._activeSection}"]`);
-      if(targetElem) {
+      if (targetElem) {
         this.renderer.addClass(targetElem, "active");
       }
     }
@@ -99,14 +132,14 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   async share() {
-    try{
+    try {
       await this.ngNavigatorShareService.share({
         title: "Resume - Outhami Hassan",
         text: "Hello, I'm a Full-stack Java Web Developer with 1+ years of experience designing web and mobile projects. Find out more in my live-resume!",
         url: "https://guilhermeborgesbastos.com"
       });
-    } catch(error) {
+    } catch (error) {
       console.log("You app is not shared, reason: ", error);
-    }    
+    }
   }
 }

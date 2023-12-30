@@ -5,6 +5,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { ContactService } from "./contact.service";
+import * as emailjs from 'emailjs-com';
 import { Contact } from "../model/contact.model";
 import { environment } from '../../environments/environment';
 
@@ -29,6 +30,8 @@ export class ContactComponent implements OnInit {
   isLoading: boolean = false;
   hasBeenSubmited: boolean = false;
   feedbackStatus: string;
+  private emailjsServiceId = 'service_49s0hnq';
+  private emailjsTemplateId = 'template_bs95oqd';
 
   constructor(private contactService: ContactService) { }
 
@@ -75,6 +78,40 @@ export class ContactComponent implements OnInit {
     this.faTimes = faTimes;
   }
 
+  sendEmail(data: any) {
+    console.log("fghj", data)
+    var dataMail = {
+      service_id: 'service_49s0hnq',
+      template_id: 'template_bs95oqd',
+      user_id: '0ByY2_CFjULhXPkJ4',
+      template_params: {
+          'to_name': 'James',
+          'reply_to': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
+      }
+  };
+    emailjs.send(
+      this.emailjsServiceId,
+      this.emailjsTemplateId,
+      { 
+        ...data,
+        'to_name': 'Houthami',
+        'from_name': data.name,
+        'from_mail': data.email,
+        'message': data.message,
+        'reply_to': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
+    },'0ByY2_CFjULhXPkJ4'
+    ).then(
+      (response) => {
+        console.log('Email sent successfully:', response);
+        this.displayUserInterfaceMessage(true);
+      },
+      (error) => {
+        console.error('Error sending email:', error);
+        this.displayUserInterfaceMessage(false);
+      }
+    );
+  }
+
   saveContact(contact: Contact) {
     this.contactService.createContact(contact).then(() => {
       this.displayUserInterfaceMessage(true);
@@ -105,7 +142,9 @@ export class ContactComponent implements OnInit {
       message: this.senderMessage.value,
       date: new Date()
     } as Contact;
-
-    this.saveContact(contactValues);
+    console.log("mail : ", this.senderName.value);
+    
+    this.sendEmail(contactValues);
+    //this.saveContact(contactValues);
   }
 }

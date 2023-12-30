@@ -25,6 +25,14 @@ header {
             font-weight: 700;
             color: #222f5c;
         }
+
+        .adsense {
+            display: flex;
+            height: 20px;
+            justify-content: center;
+            width: 210px;
+            margin-top: -10px;
+        }
     }
 
     .child.nav-container {
@@ -52,7 +60,7 @@ header {
 
                     &:not(.active):hover {
                         background-color: #fff;
-                        -webkit-box-shadow: 0 0 9px 0 rgba(112, 112, 112, 0.16); 
+                        -webkit-box-shadow: 0 0 9px 0 rgba(112, 112, 112, 0.16);
                         box-shadow: 0 0 9px 0 rgba(112, 112, 112, 0.16);
                     }
                 }
@@ -70,9 +78,9 @@ header {
 
         .frame {
             background-color: #fff;
-            display: inline-block; 
+            display: inline-block;
             border-radius: 15px;
-            -webkit-box-shadow: 0 0 9px 0 rgba(112, 112, 112, 0.16); 
+            -webkit-box-shadow: 0 0 9px 0 rgba(112, 112, 112, 0.16);
             box-shadow: 0 0 9px 0 rgba(112, 112, 112, 0.16);
 
             ul {
@@ -141,6 +149,6 @@ header {
             &:hover {
                 color: #222f5c;
             }
-        }        
+        }
     }
 }
