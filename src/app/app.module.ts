@@ -12,12 +12,7 @@ import { Injectable } from "@angular/core";
 
 import localeEn from "@angular/common/locales/en";
 import localeFr from "@angular/common/locales/fr";
-import localeFRExtra from "@angular/common/locales/extra/fr";
-
-import { AngularFireModule } from "@angular/fire/compat";
-import { AngularFireDatabaseModule } from "@angular/fire/compat/database";
-import { AngularFireAnalyticsModule } from "@angular/fire/compat/analytics";
-import { environment } from "../environments/environment";
+import localeFRExtra from "@angular/common/locales/extra/fr"; 
 
 import { HammerModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from "@angular/platform-browser";
 import { DIRECTION_ALL } from "hammerjs";
@@ -38,10 +33,7 @@ registerLocaleData(localeFr, "fr-BR", localeFRExtra);
     CoreModule,
     ResumeModule,
     PageNotFoundModule,
-    PageNotFoundRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule,
-    AngularFireAnalyticsModule,
+    PageNotFoundRoutingModule, 
     HammerModule
   ],
   declarations: [ AppComponent ],

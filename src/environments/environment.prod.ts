@@ -8,8 +8,5 @@ export const environment = {
     email: "hassan.outhami1@gmail.com",
     phone: "+212 627 520361",
     location: "Morroco, Draa Tafilallt, Tinghir"
-  },
-  // replace the dummy data below with the real firebase configs
-  firebaseConfig: { 
-  }
+  },  
 };

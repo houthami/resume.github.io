@@ -3,8 +3,7 @@ import {
   faEnvelope, faPhone, faTimes,
   faMapMarkerAlt, IconDefinition
 } from "@fortawesome/free-solid-svg-icons";
-import { FormGroup, FormControl, Validators } from "@angular/forms";
-import { ContactService } from "./contact.service";
+import { FormGroup, FormControl, Validators } from "@angular/forms"; 
 import * as emailjs from 'emailjs-com';
 import { Contact } from "../model/contact.model";
 import { environment } from '../../environments/environment';
@@ -33,7 +32,7 @@ export class ContactComponent implements OnInit {
   private emailjsServiceId = 'service_49s0hnq';
   private emailjsTemplateId = 'template_bs95oqd';
 
-  constructor(private contactService: ContactService) { }
+  constructor() { }
 
   contactForm: FormGroup = new FormGroup({
     name: new FormControl("",[
@@ -110,16 +109,7 @@ export class ContactComponent implements OnInit {
         this.displayUserInterfaceMessage(false);
       }
     );
-  }
-
-  saveContact(contact: Contact) {
-    this.contactService.createContact(contact).then(() => {
-      this.displayUserInterfaceMessage(true);
-    })
-    .catch(error => {
-      this.displayUserInterfaceMessage(false);
-    });
-  }
+  } 
 
   displayUserInterfaceMessage(hasBeenSuccessfuly: boolean) {
     this.isLoading = false;
@@ -144,7 +134,6 @@ export class ContactComponent implements OnInit {
     } as Contact;
     console.log("mail : ", this.senderName.value);
     
-    this.sendEmail(contactValues);
-    //this.saveContact(contactValues);
+    this.sendEmail(contactValues); 
   }
 }
