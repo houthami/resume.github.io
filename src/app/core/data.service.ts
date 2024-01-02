@@ -4,7 +4,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { catchError } from "rxjs/operators";
 
-import { IExperience } from "../experience/experience-interfaces";
+import { IAdsenses, IExperience } from "../experience/experience-interfaces";
 import { IAbout } from "../about/about-interfaces";
 import { INew } from "../news/news-interfaces";
 
@@ -14,6 +14,13 @@ export class DataService {
     baseUrl: string = "assets/data/";
     
     constructor(private http: HttpClient) { }
+
+    getAdsenses() : Observable<IAdsenses> {
+        return this.http.get<IAdsenses>(this.baseUrl + "adsense.json")
+            .pipe(
+                catchError(this.handleError)
+            );
+    }
 
     getExperiences() : Observable<IExperience[]> {
         return this.http.get<IExperience[]>(this.baseUrl + "experiences.json")

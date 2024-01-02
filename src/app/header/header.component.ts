@@ -2,6 +2,9 @@ import { AfterViewInit, Component, ElementRef, Inject, Input, LOCALE_ID, OnInit,
 import { IconDefinition, faBars, faCloudDownloadAlt, faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import { NgNavigatorShareService } from "ng-navigator-share";
 
+import { DataService } from "../core/data.service";
+import { IAdsenses } from "../experience/experience-interfaces";
+
 @Component({
   selector: "app-header",
   templateUrl: "./header.component.html",
@@ -12,9 +15,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   private _activeSection: any;
   private _pageXOffset: any;
+  private adsenses: string[]
   private ngNavigatorShareService: NgNavigatorShareService;
   private indexOfAdsense = 0
-  private adsenses = ['Open for freelances', 'Open for CDIs', 'Open for collaboration', 'Open for Works :)']
   adsence = ""
 
   hasMenuToggled: boolean;
@@ -27,10 +30,11 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   constructor(
     @Inject(LOCALE_ID) public locale: string,
+    private dataService: DataService,
     private renderer: Renderer2,
     ngNavigatorShareService: NgNavigatorShareService
   ) {
-    this.ngNavigatorShareService = ngNavigatorShareService;
+    this.ngNavigatorShareService = ngNavigatorShareService; 
   }
 
   // use getter setter to define the properties
@@ -62,13 +66,18 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    this.dataService.getAdsenses()
+        .subscribe((ad: IAdsenses) => {
+           console.log(ad.adsenses, "adsense")
+           this.adsenses = ad.adsenses;
+           this.displayAdsenses(1, 0)
+        });
     this.faBars = faBars;
     this.faShareAlt = faShareAlt;
     this.faCloudDownloadAlt = faCloudDownloadAlt;
-    this.displayAdsenses(1, 0)
   }
   private displayAdsenses(speed, charIndex) { 
-    
+    console.log("tttt : ",this.dataService.getAdsenses())
     this.adsence = "";
     const adsenseToDispaly = this.adsenses[this.indexOfAdsense]
     this.updateAdsence(adsenseToDispaly, 1, 0)

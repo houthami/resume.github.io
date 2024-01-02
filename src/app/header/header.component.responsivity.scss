@@ -7,12 +7,16 @@
         }
 
         .child.logo-container {
-            text-align: center;
+            text-align: center; 
         }
 
         .child.share-container {
             margin-right: 1em;
         }
+    }
+
+    .adsense { 
+        margin-left: 38px;
     }
 }
 
@@ -102,6 +106,10 @@
             }
         }
     }
+
+    .adsense { 
+        margin-left: 290px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -141,6 +149,10 @@
 
         }
     }
+
+    .adsense { 
+        margin-left: 60px;
+    }
 }
 
 @media screen and (max-width: 460px) {
@@ -175,6 +187,10 @@
                 }
             }
         } 
+    }
+
+    .adsense { 
+        margin-left: 45px;
     }
 
 }
@@ -222,5 +238,10 @@
                 font-size: 20px;
             }        
         }
+    }
+
+    .adsense { 
+        margin-top: -5px;
+        margin-left: 38px;
     }
 }

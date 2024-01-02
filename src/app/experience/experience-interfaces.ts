@@ -24,3 +24,7 @@ export interface IExperienceMedia {
     title: string;
     http: string;
 }
+
+export interface IAdsenses {
+    adsenses?: string[];
+}
